@@ -18,8 +18,8 @@ public class Controller {
     private Repository repository;
 
     @GetMapping("/")
-    public String Hello() {
-        return "Hello!";
+    public Iterable<Customer> GetCustomers() {
+        return repository.findAll();
     }
     
     @PostMapping("/")
